@@ -1,6 +1,7 @@
 /* section heading */
-.section.columns-container > .default-content-wrapper {
-
+.section.columns-container {
+	padding-top: 0;
+	padding-bottom: 24px;
 }
 
 .section.columns-container > .default-content-wrapper h4,
@@ -69,7 +70,6 @@
     order: unset;
   }
 }
-
 
 @media (width <= 900px) {	
 	.section.columns-container > .default-content-wrapper h4 {
