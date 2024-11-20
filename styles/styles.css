@@ -15,6 +15,7 @@
   --light-color: #fff;
   --charcoal: #383B3E;
   --text-color: #212529;
+  --grey-highlight: #F2F3F2;
   --light-red-accent: #C41F3E;
   --innovation-red: #8B1D41;
   --link-color: var(--innovation-red);
@@ -88,6 +89,7 @@ h4, h5, h6 {
   margin-top: 1em;
   margin-bottom: .5em;
   scroll-margin: calc(var(--nav-height) + 1em);
+  color: var(--charcoal);
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }
@@ -156,6 +158,7 @@ a.button:any-link, button {
   font-family: var(--heading-font-family);
   line-height: 1.5;
   border-radius: 0.25rem;
+  text-transform: capitalize;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
