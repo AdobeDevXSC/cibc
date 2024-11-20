@@ -6,8 +6,12 @@ Original Landing Page - EN: https://www.innovationbanking.cibc.com/en/web/guest/
 Original Landing Page - FR: https://www.innovationbanking.cibc.com/fr/web/guest/accueil
 
 ## Environments
-- Preview: https://main--cibc--adobedevxsc.hlx.page/
-- Live: https://main--cibc--adobedevxsc.hlx.live/
+English (en)
+- Preview: https://main--cibc--adobedevxsc.aem.page/en/
+- Live: https://main--cibc--adobedevxsc.aem.live/en/
+French (fr)
+- Preview: https://main--cibc--adobedevxsc.aem.page/fr/
+- Live: https://main--cibc--adobedevxsc.aem.live/fr/
 
 ## Installation
 
