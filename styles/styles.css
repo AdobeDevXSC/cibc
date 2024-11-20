@@ -12,12 +12,15 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
-  --light-color: #eee;
-  --dark-color: #ccc;
-  --text-color: black;
+  --light-color: #fff;
+  --charcoal: #383B3E;
+  --text-color: #212529;
+  --light-red-accent: #C41F3E;
+  --innovation-red: #8B1D41;
+  --link-color: var(--innovation-red);
+  --link-hover-color: var(--light-red-accent);
+  --background-color: var(--light-color);
+
 
   /* fonts */
   --body-font-family: whitney-book-pro;
@@ -133,23 +136,27 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
+  border: 2px solid var(--innovation-red);
+  padding: 6px 12px;
   text-align: center;
+  vertical-align: middle;
+  user-select: none;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  color: var(--background-color);
+  color: var(--light-color);
   background-color: var(--link-color);
-  margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  font-size: 0.875rem;
+  font-family: var(--heading-font-family);
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
