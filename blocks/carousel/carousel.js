@@ -1,4 +1,5 @@
 import { fetchPlaceholders, createOptimizedPicture } from '../../scripts/aem.js';
+import { makeVideo } from '../../scripts/scripts.js';
 
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
