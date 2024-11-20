@@ -1,9 +1,13 @@
 # Door Opener Project Boilerplate 
 
+Mockup of CIBC landing page in both English and French to showcase how efficient development in Edge Delivery Services is.
+
+Original Landing Page - EN: https://www.innovationbanking.cibc.com/en/web/guest/home
+Original Landing Page - FR: https://www.innovationbanking.cibc.com/fr/web/guest/accueil
 
 ## Environments
-- Preview: Preview: https://main--dev-xsc-boilerplate--adobedevxsc.hlx.page/
-- Live: https://main--dev-xsc-boilerplate--adobedevxsc.hlx.live/
+- Preview: https://main--cibc--adobedevxsc.hlx.page/
+- Live: https://main--cibc--adobedevxsc.hlx.live/
 
 ## Installation
 
