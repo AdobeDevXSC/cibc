@@ -16,7 +16,6 @@ export default async function decorate(block) {
   }
 
   const ul = document.createElement('ul');
-
 	[...block.children].forEach((row) => {
 		const anchor = document.createElement('a');
 		anchor.href = '';
