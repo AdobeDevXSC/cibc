@@ -20,7 +20,6 @@ export default function decorate(block) {
 		picLink.remove();
 	  }
 
-
       if (pic) {
         const picWrapper = pic.closest('div');
 		if (picWrapper && picWrapper.children.length === 1) {

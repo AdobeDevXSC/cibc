@@ -106,6 +106,7 @@ let carouselId = 0;
 export default async function decorate(block) {
   carouselId += 1;
   const isJSONCarousel = block.classList.contains('is-json');
+  const isHero = block.classList.contains('hero');
 
   block.setAttribute('id', `carousel-${carouselId}`);
   const rows = block.querySelectorAll(':scope > div');
@@ -178,6 +179,19 @@ export default async function decorate(block) {
   } else {
 	rows.forEach((row, idx) => {
 		const slide = createSlide(row, idx, carouselId);
+		const slideImgLink = slide.querySelector('a');
+
+		if (slideImgLink && slideImgLink.href.includes('/images')){
+			console.log("carousel", slideImgLink);
+			const picture = createOptimizedPicture(slideImgLink.href, slideImgLink.title, false);
+			const picWrapper = slideImgLink.closest('div');
+			picWrapper.append(picture);
+
+			slideImgLink.remove()
+		}
+
+
+
 		slidesWrapper.append(slide);
 
 		if (slideIndicators) {
