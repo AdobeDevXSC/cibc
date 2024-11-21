@@ -206,6 +206,12 @@
 	padding: 32px 16px;
 }
 
+.carousel.quote .carousel-navigation-buttons {
+	bottom: 16px;
+	right: 16px;
+	left: unset;
+}
+
 .carousel.quote > div .carousel-slides {
 	margin: 0;
 }
