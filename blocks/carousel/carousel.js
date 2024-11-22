@@ -182,12 +182,12 @@ export default async function decorate(block) {
 		const slide = createSlide(row, idx, carouselId);
 		const slideMediaLink = slide.querySelector('a');
 
-		if (slideMediaLink && slideMediaLink.href.includes('/images') || slideMediaLink.href.includes('/Images')){
-			const picture = createOptimizedPicture(slideMediaLink.href, slideMediaLink.title, false);
-			const picWrapper = slideMediaLink.closest('div');
-			picWrapper.append(picture);
-			slideMediaLink.remove()
-		 } 
+		// if (slideMediaLink && slideMediaLink.href.includes('/images') || slideMediaLink.href.includes('/Images')){
+		// 	const picture = createOptimizedPicture(slideMediaLink.href, slideMediaLink.title, false);
+		// 	const picWrapper = slideMediaLink.closest('div');
+		// 	picWrapper.append(picture);
+		// 	slideMediaLink.remove()
+		//  } 
 		
 		//  if(slideMediaLink && slideMediaLink.href.includes(window.hlx.codeBasePath)) {
 		// 	if(slideMediaLink.href.includes()) {
