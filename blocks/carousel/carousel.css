@@ -98,6 +98,11 @@
 	transform: translateX(-50%);
 }
 
+.carousel.media .carousel-navigation-buttons {
+	right: 48px;
+	bottom: 48px;
+}
+
 /* buttons */
 .carousel.hero .carousel-navigation-buttons button {
 	width: 40px;
@@ -185,20 +190,93 @@
 }
 
 /* media carousel styles */
-
-.carousel.media > div {
-	border: solid 2px lime;
+.carousel.media .carousel-slide .carousel-slide-image img {
+	display: block;
+	object-fit: cover;
 }
 
-.carousel.media li .slide-content {
-	border: solid 2px purple;
+.carousel.media li {
+	min-height: 1080px;
+	max-height: 1080px;
 }
 
-.carousel.media > div .slide-content > .button-container::after {
+.carousel.media li .carousel-slide-content {
+	padding: 8px 48px;
+}
+
+.carousel.media li .carousel-slide-content h5 {
+	text-transform: uppercase;
+	font-size: 18px;
+	padding-top: 8px;
+}
+
+.carousel.media li .carousel-slide-content h3 {
+	font-size: 32px;
+	line-height: 1.1;
+	font-weight: 400;
+	margin-bottom: 48px;
+}
+
+/* even slides - red background */
+.carousel.media li:nth-of-type(2n) {
+	background-color: var(--innovation-red);
+	color: var(--light-color);
+}
+
+.carousel.media li:nth-of-type(2n) .carousel-slide-content h3,
+.carousel.media li:nth-of-type(2n) .carousel-slide-content h5 {
+	color: var(--light-color);
+}
+
+.carousel.media li:nth-of-type(2n) .carousel-slide-content {
+	position: relative;
+}
+
+.carousel.media li:nth-of-type(2n) .carousel-slide-content > .button-container > a::before {
 	content: "";
 	display: block;
+	width: 86px;
+	height: 86px;
+	margin-right: 4px;
+	background: url("https://main--cibc--adobedevxsc.aem.live/images/icon-podcast-play-large-white.png");
+}
+
+.carousel.media li .carousel-slide-content p:not(.button-container) {
+	font-size: 16px;
+	margin-bottom: 32px;
+}
+
+.carousel.media li .carousel-slide-content p > a {
+	background-color: transparent;
+	border-color: transparent;
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	margin: 0 0 0 -8px;
+	padding: 0;
+	font-size: 18px;
+	font-family: var(--heading-font-family);
+}
+
+.carousel.media li .carousel-slide-content p > a:hover {
+	background-color: transparent;
+}
+
+.carousel.media li:not(:nth-of-type(2n)) .carousel-slide-content > p.button-container a {
+	color: var(--innovation-red);
+}
+	
+.carousel.media li:not(:nth-of-type(2n)) .carousel-slide-content > p.button-container a::before {
+	content: "";
+	display: block;
+	width: 86px;
+	height: 86px;
+	margin-right: 4px;
 	background: url("https://main--cibc--adobedevxsc.aem.live/images/icon-podcast-play-large-red.png");
 }
+
+
+
 
 
 /* quote carousel styles */
@@ -393,6 +471,16 @@
 		width: 0.8rem;
 	}
 
+	/* media carousel mobile styles */
+	.carousel.media .carousel-slides {
+		margin: 0;
+	}
+
+	.carousel.media .carousel-slide .carousel-slide-image {
+        max-height: 350px;
+		margin: 0;
+    }
+
 	/* quote carousel mobile styles */
 	.carousel.quote > div .carousel-slide {
 		flex-direction: column;
@@ -411,6 +499,9 @@
 		font-size: 22px;
 	}
 
-
 	/* logo */
+	.carousel.logo .carousel-slide {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
 }
