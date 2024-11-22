@@ -177,27 +177,42 @@ export default async function decorate(block) {
 		}
 		link.remove();
 	})
-  } else {
+  } else if(isHero){
 	rows.forEach((row, idx) => {
 		const slide = createSlide(row, idx, carouselId);
 		const slideMediaLink = slide.querySelector('a');
 
-		// if (slideMediaLink && slideMediaLink.href.includes('/images') || slideMediaLink.href.includes('/Images')){
-		// 	const picture = createOptimizedPicture(slideMediaLink.href, slideMediaLink.title, false);
-		// 	const picWrapper = slideMediaLink.closest('div');
-		// 	picWrapper.append(picture);
-		// 	slideMediaLink.remove()
-		//  } 
+		if (slideMediaLink && slideMediaLink.href.includes('.png') || slideMediaLink.href.includes('.jpg')){
+			const picture = createOptimizedPicture(slideMediaLink.href, slideMediaLink.title, false);
+			const picWrapper = slideMediaLink.closest('div');
+			console.log('carousel', picWrapper)
+			picWrapper.append(picture);
+			slideMediaLink.remove()
+		 } 
 		
-		//  if(slideMediaLink && slideMediaLink.href.includes(window.hlx.codeBasePath)) {
-		// 	if(slideMediaLink.href.includes()) {
-		// 		slideMediaLink.href = slideMediaLink.text;
-		// 	}
-		// 	const videoWrapper = slideMediaLink.closest('div');
-		// 	makeVideo(videoWrapper, slideMediaLink.href);
-		// 	slideMediaLink.remove();
-		//  }
+		 if(slideMediaLink && slideMediaLink.href.includes('.mp4')) {
+			if(slideMediaLink.href.includes()) {
+				slideMediaLink.href = slideMediaLink.text;
+			}
+			const videoWrapper = slideMediaLink.closest('div');
+			makeVideo(videoWrapper, slideMediaLink.href);
+			slideMediaLink.remove();
+		 }
 
+		slidesWrapper.append(slide);
+
+		if (slideIndicators) {
+			const indicator = document.createElement('li');
+			indicator.classList.add('carousel-slide-indicator');
+			indicator.dataset.targetSlide = idx;
+			indicator.innerHTML = `<button type="button"><span>${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}</span></button>`;
+			slideIndicators.append(indicator);
+		}
+		row.remove();
+	  })
+	} else {
+		rows.forEach((row, idx) => {
+			const slide = createSlide(row, idx, carouselId);
 		slidesWrapper.append(slide);
 
 		if (slideIndicators) {
