@@ -130,7 +130,7 @@ footer .footer ul li a {
 	color: var(--light-color);
 }
 
-@media(width <= 686px){
+@media(width <= 900px){
 	footer .footer .section:first-of-type > div {
 		flex-wrap: wrap;
 	}
