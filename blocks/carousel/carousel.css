@@ -124,7 +124,7 @@
 	border: none;
 }
 
-/*  arrows */
+/* arrows */
 /* hero arrows */
 .carousel.hero .carousel-navigation-buttons button::after {
 	display: block;
@@ -188,6 +188,8 @@
 .carousel.hero > div {
 
 }
+
+
 
 /* media carousel styles */
 .carousel.media .carousel-slide .carousel-slide-image img {
@@ -437,6 +439,13 @@
 
 
   @media(width <= 1040px){
+
+/* media carousel styles */
+	.carousel.media .carousel-slide .carousel-slide-image {
+		max-height: 475px;
+		margin: 0;
+	}
+
 	.carousel.quote .carousel-slide .carousel-slide-content {
 		width: calc(50% - 32px);
 		padding: 0 16px;
