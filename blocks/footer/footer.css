@@ -170,7 +170,8 @@ footer .footer ul li a {
 
 	footer .footer .section:nth-of-type(4) > div > p:nth-of-type(3) {
 		padding: 0 24px;
-		max-width: 55%;
+		max-width: 60%;
+		margin-bottom: 8px;
 	}
 
 	footer .footer .section:nth-of-type(4) > div > ul {
