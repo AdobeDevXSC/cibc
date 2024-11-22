@@ -49,7 +49,6 @@
 	display: flex;
 	justify-content: center;
 	gap: 0.5rem;
-
 }
   
 /* hero indicator styles */
@@ -583,6 +582,39 @@
 		border-left: 0;
 		height: 0.8em;
 		width: 0.8rem;
+	}
+
+	/* hero carousel mobile styles */
+	.carousel.hero .carousel-navigation-buttons {
+		transform: none;
+		left: 0;
+		right: 0;
+		top: 20%;
+	}
+
+	.section.hero.carousel-container nav {
+		bottom: unset;
+		top: 185px;
+		z-index: 10;
+	}
+
+	.carousel.hero .carousel-slides .carousel-slide {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.carousel.hero .carousel-slide .carousel-slide-content {
+		position: relative;
+		transform: none;
+		left: unset;
+		top: unset;
+		margin: 48px 0 32px;
+		padding: 0;
+	}
+
+	.carousel.hero li:first-of-type .carousel-slide-content h4,
+	.carousel.hero li:first-of-type .carousel-slide-content p {
+		text-align: center;
 	}
 
 	/* media carousel mobile styles */
