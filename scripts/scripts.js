@@ -575,9 +575,9 @@ function aggregateTabSectionsIntoComponents(main) {
 }
 
 /**
- * Loads everything needed to get to LCP.
- * @param {Element} doc The container element
- */
+  * Loads everything needed to get to LCP.
+  * @param {Element} doc The container element
+*/
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
