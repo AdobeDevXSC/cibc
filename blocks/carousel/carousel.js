@@ -1,4 +1,5 @@
-import { fetchPlaceholders, createOptimizedPicture } from '../../scripts/aem.js';
+import { fetchPlaceholders } from '../../scripts/aem.js';
+import { createOptimizedPicture } from '../../scripts/scripts.js';
 import { makeVideo } from '../../scripts/scripts.js';
 
 function updateActiveSlide(slide) {
@@ -104,6 +105,7 @@ async function fetchJson(link) {
 let carouselId = 0;
 
 export default async function decorate(block) {
+  console.log(block);
   carouselId += 1;
   const isJSONCarousel = block.classList.contains('is-json');
   const isHero = block.classList.contains('hero');
