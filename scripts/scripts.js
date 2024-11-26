@@ -17,7 +17,7 @@ import {
   loadBlock,
   loadScript,
   toCamelCase,
-  toClassName,
+  toClassName
 } from './aem.js';
 
 // Define an execution context
